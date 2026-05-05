@@ -23,18 +23,18 @@
         h1, h2, h3 { font-family: 'Fraunces', serif; font-weight: 900; line-height: 1.1; }
         .label { font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: var(--electric-matcha); margin-bottom: 15px; display: block; }
 
-        /* HEADER С ПРОЗИРАЩ ЕФЕКТ (Glassmorphism) */
+        /* HEADER С ПРОЗИРАЩ ЕФЕКТ */
         header { 
             padding: 25px 5%; 
             display: flex; 
             justify-content: space-between; 
             align-items: center;
-            position: fixed; /* За да стои винаги отгоре */
+            position: fixed; 
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(12, 13, 10, 0.7); /* Полупрозрачно черно */
-            backdrop-filter: blur(15px); /* Ефектът на размиване на фона */
+            background: rgba(12, 13, 10, 0.7); 
+            backdrop-filter: blur(15px); 
             -webkit-backdrop-filter: blur(15px);
             z-index: 1000;
             border-bottom: 1px solid rgba(237, 229, 207, 0.1);
@@ -56,23 +56,18 @@
         }
         nav a:hover { opacity: 1; color: var(--electric-matcha); }
 
-        /* Компенсация за фиксирания хедър */
         .content-start { padding-top: 120px; }
 
-        /* Hero Section */
         .hero h1 { font-size: clamp(60px, 12vw, 130px); margin-bottom: 30px; letter-spacing: -3px; }
         .hero h1 em { color: var(--electric-matcha); font-style: italic; }
 
-        /* Colors Grid */
         .color-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 40px; }
         .color-card { padding: 20px; border-radius: 4px; height: 160px; display: flex; flex-direction: column; justify-content: flex-end; }
         .color-card span { font-size: 9px; font-weight: bold; text-transform: uppercase; line-height: 1.4; }
 
-        /* Typography Box */
         .typo-box { background: var(--deep-moss); padding: 60px; margin-top: 40px; border-radius: 4px; border: 1px solid rgba(196, 236, 82, 0.1); }
         .font-spec { font-size: 48px; border-bottom: 1px solid var(--aged-bark); padding-bottom: 20px; margin-bottom: 20px; }
 
-        /* Menu Items */
         .menu-item { display: flex; align-items: center; padding: 30px; background: var(--deep-moss); margin-bottom: 2px; transition: 0.3s; }
         .menu-item:hover { background: var(--aged-bark); }
         .item-price { font-family: 'Fraunces', serif; font-size: 22px; margin: 0 30px; font-weight: 700; }
@@ -83,7 +78,6 @@
         .obj-card { background: var(--deep-moss); padding: 25px; border-radius: 4px; }
         .obj-img { aspect-ratio: 1/1; background-color: var(--pitch); margin-bottom: 25px; border-radius: 2px; background-size: cover; background-position: center; border: 1px solid rgba(237, 229, 207, 0.05); }
 
-        /* CTA */
         .cta-full { background: var(--electric-matcha); color: var(--pitch); padding: 140px 5%; text-align: center; }
         .cta-full h2 { font-size: clamp(50px, 8vw, 90px); margin-bottom: 40px; letter-spacing: -2px; }
         .black-btn { background: var(--pitch); color: var(--raw-cream); padding: 25px 60px; text-decoration: none; font-weight: 900; text-transform: uppercase; font-size: 13px; letter-spacing: 2px; display: inline-block; transition: 0.3s; }
@@ -91,7 +85,7 @@
 
         @media (max-width: 768px) { 
             nav { display: none; } 
-            .brand-grid, .color-grid, .obj-grid { grid-template-columns: 1fr; } 
+            .obj-grid { grid-template-columns: 1fr; } 
         }
     </style>
 </head>
@@ -178,9 +172,18 @@
             <span class="label">Tangible Brand Identity</span>
             <h2 style="margin-bottom: 40px;">Objects people<br>actually keep.</h2>
             <div class="obj-grid">
-                <div class="obj-card" style="background: var(--aged-bark);"><div class="obj-img"></div><h4 style="font-family: 'Fraunces';">Typography Wrap</h4></div>
-                <div class="obj-card" style="background: var(--aged-bark);"><div class="obj-img"></div><h4 style="font-family: 'Fraunces';">Botanical Line Art</h4></div>
-                <div class="obj-card" style="background: var(--electric-matcha); color: var(--pitch);"><div class="obj-img" style="background: var(--pitch);"></div><h4 style="font-family: 'Inter'; font-weight: 900;">Launch Tote</h4></div>
+                <div class="obj-card">
+                    <div class="obj-img" style="background-image: url('Images/Typography Wrap.png');"></div>
+                    <h4 style="font-family: 'Fraunces';">Typography Wrap</h4>
+                </div>
+                <div class="obj-card">
+                    <div class="obj-img" style="background-image: url('Images/Botanical Line Art.png');"></div>
+                    <h4 style="font-family: 'Fraunces';">Botanical Line Art</h4>
+                </div>
+                <div class="obj-card" style="background: var(--electric-matcha); color: var(--pitch);">
+                    <div class="obj-img" style="background-image: url('Images/Launch Tote.png'); background-color: var(--pitch);"></div>
+                    <h4 style="font-family: 'Inter'; font-weight: 900;">Launch Tote</h4>
+                </div>
             </div>
         </section>
     </div>
